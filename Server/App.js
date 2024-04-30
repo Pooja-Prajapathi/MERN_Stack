@@ -6,13 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
-app.use(cors(
-    {
-        origin:{""},
-        methods:{"POST","GET"},
-        credentials=true
-    }
-));
+app.use(cors());
 
 // MongoDB Connection
 mongoose.connect('mongodb+srv://poojaprajapathi:HM6tifjOegY1gk81@cluster0.bao1v84.mongodb.net/', {
